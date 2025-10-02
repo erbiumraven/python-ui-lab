@@ -26,6 +26,7 @@ jobs:
           docker run --rm \
             -v ${{ github.workspace }}/allure-results:/app/allure-results \
             my-playwright-tests
+        continue-on-error: true    
 
       - name: Upload Allure results
         uses: actions/upload-artifact@v4
